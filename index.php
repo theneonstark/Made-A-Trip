@@ -26,7 +26,7 @@ $exe = mysqli_query($con, "SELECT * FROM packages");
 </head>
 
 <body>
-    <div class="bg-warning main-head">
+    <div class="main-head">
         <div class="box bg-warning text-end d-lg-none"></div>
         <div class="container">
             <div class="row  justify-content-around align-items-center main-nav ">
@@ -56,13 +56,13 @@ $exe = mysqli_query($con, "SELECT * FROM packages");
                 <div class="col-lg-3 text-end d-none d-lg-block" >
                 <span class="text-light" style="font-size: 20px;">
                         <?php
-                        session_start();
+                        // session_start();
 
-                        if (isset($_SESSION['id'])) {
-                            echo $_SESSION['name'];
-                        }
+                        // if (isset($_SESSION['id'])) {
+                        //     echo $_SESSION['name'];
+                        // }
 
-                        ?>
+                        ?> 
                         
                     </span>    
                 <i class="bi bi-person-circle text-light h4 "></i>
@@ -80,21 +80,22 @@ $exe = mysqli_query($con, "SELECT * FROM packages");
 
             <!-- header content  -->
             <div class="container">
-            <div class="header-content text-light text-lg-right  mt-4 ">
-                <p class="display-4 pt-4">Book a Tour</p>
-                <p class="lead" data-aos="fade-up">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam alias natus non maiores ab eum nostrum vitae iure modi! Ad voluptatum modi ipsum eaque dolorum molestiae accusantium nisi quae alias?
+            <div class="header-content text-light text-lg-right  mt-4 first">
+                <p class="display-4 pt-4 text-center text-uppercase fw-bold">Discover</p>
+                <p class="lead text-center" data-aos="fade-up">
+                    the Delhi
+                    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam alias natus non maiores ab eum nostrum vitae iure modi! Ad voluptatum modi ipsum eaque dolorum molestiae accusantium nisi quae alias?
 
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi vero eveniet ipsum culpa minus a rerum pariatur quam. Odit obcaecati aliquid nostrum optio illum nihil dolore adipisci recusandae aspernatur eius.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi vero eveniet ipsum culpa minus a rerum pariatur quam. Odit obcaecati aliquid nostrum optio illum nihil dolore adipisci recusandae aspernatur eius. -->
                 </p>  
-                <p class="text-center"><a href="#package" class="btn btn-outline-light px-5 pt-2 ">Book</a href="#package"></p>  
+                <p class="text-center"><a href="#package" class="px-5 pt-2 ">Book</a href="#package"></p>  
             </div>
         </div>
     </div>
 
     <p class="display-5 my-4 text-center">
         <span><u>Start Your Journey</u></span>
-        
+ 
     </p>
 
     <!-- search box -->
