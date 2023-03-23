@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $con = mysqli_connect("localhost", "root", "", "trip");
 $exe = mysqli_query($con, "SELECT * FROM packages");
 
@@ -56,11 +58,10 @@ $exe = mysqli_query($con, "SELECT * FROM packages");
                 <div class="col-lg-3 text-end d-none d-lg-block" >
                 <span class="text-light" style="font-size: 20px;">
                         <?php
-                        // session_start();
 
-                        // if (isset($_SESSION['id'])) {
-                        //     echo $_SESSION['name'];
-                        // }
+                        if (isset($_SESSION['id'])) {
+                            echo $_SESSION['name'];
+                        }
 
                         ?> 
                         
@@ -90,6 +91,27 @@ $exe = mysqli_query($con, "SELECT * FROM packages");
                 </p>  
                 <p class="text-center"><a href="#package" class="px-5 pt-2 ">Book</a href="#package"></p>  
             </div>
+        </div>
+        <div class="d-flex justify-content-around align-items-center w-50 second">
+            <div class="third">
+            <i class="bi bi-airplane-engines"></i>
+            <p class="text-center">Plane</p>
+            </div>
+            <div class="third">
+            <i class="bi bi-train-freight-front"></i>
+            <p class="text-center">Train</p>
+            </div>
+            <div class="third">
+            <i class="bi bi-car-front-fill"></i>
+            <p class="text-center">Car</p>
+            </div>
+            <div class="third">
+            <i class="bi bi-bicycle"></i>
+            <p class="text-center">Bike</p>
+            </div>
+            
+            
+            
         </div>
     </div>
 
