@@ -77,8 +77,16 @@ $exe = mysqli_query($con, "SELECT * FROM packages");
         </div>
         </div>
     <div class="header">
-        
-
+        <div class="images">
+        <img src="images\SafdarJang Tomb.jpg" class="imgs" alt="">
+        <img src="images\Gandhi Smiriti.jpg" class="imgs" alt="">
+        <img src="images\Humayun Tomb.jpg" class="imgs" alt="">
+        <img src="images\Indiagate.jpg" class="imgs" alt="">
+        <img src="images\Purana Quila.jpg" class="imgs" alt="">
+        <img src="images\Qutub Minar.jpg" class="imgs" alt="">
+        <img src="images\Jama Masjid.jpg" class="imgs" alt="">
+        <img src="images\Lal Quila.jpg" class="imgs" alt="">
+        </div>
             <!-- header content  -->
             <div class="container">
             <div class="header-content text-light text-lg-right  mt-4 first">
@@ -92,20 +100,20 @@ $exe = mysqli_query($con, "SELECT * FROM packages");
                 <p class="text-center"><a href="#package" class="px-5 pt-2 ">Book</a href="#package"></p>  
             </div>
         </div>
-        <div class="d-flex justify-content-around align-items-center w-50 second">
-            <div class="third">
+        <div class="d-flex justify-content-center align-items-start w-50 second">
+            <div class="third d-flex justify-content-center flex-column align-items-center">
             <i class="bi bi-airplane-engines"></i>
             <p class="text-center">Plane</p>
             </div>
-            <div class="third">
+            <div class="third d-flex justify-content-center flex-column align-items-center">
             <i class="bi bi-train-freight-front"></i>
             <p class="text-center">Train</p>
             </div>
-            <div class="third">
+            <div class="third d-flex justify-content-center flex-column align-items-center">
             <i class="bi bi-car-front-fill"></i>
             <p class="text-center">Car</p>
             </div>
-            <div class="third">
+            <div class="third d-flex justify-content-center flex-column align-items-center">
             <i class="bi bi-bicycle"></i>
             <p class="text-center">Bike</p>
             </div>
@@ -114,26 +122,31 @@ $exe = mysqli_query($con, "SELECT * FROM packages");
             
         </div>
     </div>
-
-    <p class="display-5 my-4 text-center">
-        <span><u>Start Your Journey</u></span>
- 
-    </p>
-
+    
+    
     <!-- search box -->
-    <div class="row justify-content-center aling-items-center">
+    <div class="pt-4 row justify-content-center aling-items-center forth">
         <div class="col-lg-8 col-md-12">
-        <form action="" method="post">
-            <div class="input-group mb-3">
-              
-                <input type="text" class="form-control" placeholder="Search here" name="search">
-                <button class="input-group-text" id="basic-addon1" name="sub" value="submit"><i class="bi bi-search"></i></button>
-                
-            </div>
+            <form action="" method="post">
+                <div class="d-flex mb-4">
+                    <input type="text" class="fifth" placeholder="Search here" name="search">
+                    <button class="input-group-text rounded-pill" id="basic-addon1" name="sub" value="submit"><i class="bi bi-search"> Search</i></button>
+                    
+                </div>
             </form>
         </div>
     </div>
     <!-- packages to book  -->
+    <p class="display-5 my-4 text-center sixth">
+        <span>
+            We have the Best Tour
+        </span>
+        <br>
+        <span>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis natus repellendus culpa sint, debitis perspiciatis eos 
+        </span>
+ 
+    </p>
 
     <div class="card-div container" id="package">
 
