@@ -2,16 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Mukta', sans-serif;
 }
 
-.main-nav{
+.main-nav {
     height: 80px;
 }
-.main-head{
+
+.main-head {
     background: rgba(77, 2, 96);
     box-shadow: 0px 0px 100px black inset;
     position: sticky;
@@ -19,15 +20,15 @@
     z-index: 300;
 }
 
-.first{
+.first {
     position: relative;
 }
 
-.first p:nth-child(1){
+.first p:nth-child(1) {
     font-size: 8.75rem;
 }
 
-.first p:nth-child(2){
+.first p:nth-child(2) {
     font-family: 'Delicious Handrawn', cursive;
     font-weight: 500;
     font-size: 5.25rem;
@@ -37,101 +38,181 @@
     transform: translate(-50%, -50%);
 }
 
-.first p:nth-child(3){
+.first p:nth-child(3) {
     position: absolute;
     top: 200%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 1.5rem;
     padding: 0.175rem 0.125rem;
-    background: linear-gradient(to right, #FFB202, #CD02FF );
+    background: linear-gradient(to right, #FFB202, #CD02FF);
 }
 
-.first p:nth-child(3) a{
+
+.first p:nth-child(3) a {
     text-decoration: none;
     color: #fff;
 }
 
 .second {
     box-shadow: 0px 0px 10px #c0c0c0;
-    height: 15vh;
+    height: 20vh;
     position: absolute;
     left: 50%;
-    top: 95%;
+    top: 100%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    border-radius: 2rem;
-    padding: 1rem 0 0 0;
+    border-radius: 6rem;
+    overflow: hidden;
 }
 
-.second i{
-    font-size: 2rem;
+.second i {
+    font-size: 1.75rem;
 }
 
-.header{
-    background-image: linear-gradient(to left, rgba(205, 2, 255 ,0.2),rgba(255, 178, 2 ,0.2)),url("images/newdelhi.jpg");
+.third {
+    padding: 0.25rem 4.5rem;
+    transition: 0.3s ease;
+}
+
+.third:hover {
+    background: #FFB202;
+}
+
+.forth {
+    background: linear-gradient(to right, #FFB202, #CD02FF);
+    position: relative;
+    top: -2.8rem;
+}
+
+.fifth {
+    border: none;
+    width: 100%;
+    outline: none;
+    border-radius: 1.75rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.fifth+button {
+    font-weight: 600;
+    border: none;
+    appearance: none;
+}
+
+.fifth+button:hover {
+    background: #FFB202;
+}
+
+.sixth span:nth-child(3) {
+    font-size: 1.5rem;
+    color: #606060;
+}
+
+.seventh {
+    border-radius: 18px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow: 23px 23px 47px #bebebe,
+        -23px -23px 47px #ffffff;
+}
+
+.header {
+    /* background-image: linear-gradient(to left, rgba(205, 2, 255 ,0.2),rgba(255, 178, 2 ,0.2)),url("images/newdelhi.jpg"); */
     background-size: 100% 100%;
     height: 100vh;
     width: 100%;
     position: relative;
     top: -2.8rem;
-    padding-top: 4rem ;
-    /* z-index:; */
+    padding-top: 4rem;
+    overflow: hidden;
+    box-shadow: 0rem 0rem 100rem #ffb30274 inset;
 }
 
-.menu ul{
-list-style-type: none;
-font-size: 20px;
-margin: 0;
-/* height: 7vh; */
+.header img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    z-index: -300;
 }
-.menu ul li{
+
+.header .images {
+    width: 100%;
+    height: auto;
+
+}
+
+.gradient-text {
+    background: -webkit-linear-gradient(#FFB202, #CD02FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.button button {
+    background: linear-gradient(to right, #FFB202, #CD02FF);
+    border: 2rem;
+    padding: 0.25rem 1rem;
+}
+
+.menu ul {
+    list-style-type: none;
+    font-size: 20px;
+    margin: 0;
+    /* height: 7vh; */
+}
+
+.menu ul li {
     display: inline;
-    margin-right:35px; 
+    margin-right: 35px;
 }
-.menu ul li a{
+
+.menu ul li a {
     text-decoration: none;
-    color: white;   
+    color: white;
 }
-.menu ul li select{
-background-color: transparent;
-color: white;
-border: none;    
+
+.menu ul li select {
+    background-color: transparent;
+    color: white;
+    border: none;
 }
-.menu ul li select option{
+
+.menu ul li select option {
     background-color: white;
     color: black;
     border: none;
-    border-radius:0px;
+    border-radius: 0px;
 
 }
-.info{
+
+.info {
     position: relative;
 }
-.info span{
+
+.info span {
     cursor: pointer;
 }
-.info-content{
+
+.info-content {
     height: 150px;
     width: 150px;
     background-color: gray;
     color: white;
     /* text-decoration: underline; */
-    padding-top:5px;
-    display: none; 
-    position:absolute;
+    padding-top: 5px;
+    display: none;
+    position: absolute;
     top: 25px;
     right: -53px;
     font-size: medium;
 
-    
+
 }
 
-body{
+body {
     overflow-x: hidden;
 }
 
-.box{
+.box {
     width: 250px;
     height: 100vh;
     position: absolute;

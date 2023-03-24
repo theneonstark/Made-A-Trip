@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (isset($_REQUEST['sub'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -38,7 +39,7 @@ if (isset($_REQUEST['sub'])) {
 
 <body>
 
-    <div class="bg-warning main-head">
+    <div class="main-head">
         <div class="container">
             <div class="row pt-3 justify-content-around align-items-center main-nav">
                 <div class="col-lg-2">LOGO</div>
@@ -67,7 +68,6 @@ if (isset($_REQUEST['sub'])) {
                     <i class="bi bi-person-circle text-light h4 "></i>
                     <span class="text-light h4 ms-2 ">
                         <?php
-                        session_start();
 
                         if (isset($_SESSION['id'])) {
                             echo $_SESSION['name'];
@@ -85,35 +85,35 @@ if (isset($_REQUEST['sub'])) {
 
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-6 col-sm-12 shadow mt-4 p-3">
-                <p class="display-5 text-center">Feedback form</p>
+            <div class="col-lg-6 col-sm-12 shadow mt-4 p-3 seventh">
+                <p class="display-5 text-center gradient-text">Feedback form</p>
                 <br>
                 <form action="" method="post">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="name" class="form-control" id="name" name="name">
+                        <input type="name" class="fifth" id="name" name="name">
                     </div>
                     <br>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email">
+                        <input type="email" class="fifth" id="email" name="email">
                     </div>
                     <br>
                     <div class="form-group">
                         <label for="contact">contact Number</label>
-                        <input type="text" class="form-control" id="contact" name="contact">
+                        <input type="text" class="fifth" id="contact" name="contact">
                         <span class="text-danger small">optional</span>
                     </div>
                     <br>
                     <div class="form-group">
                         <label for="feed">Enter your Feedback</label>
-                        <textarea class="form-control" id="feed" name="feed"></textarea>
+                        <textarea class="fifth" id="feed" name="feed"></textarea>
 
                     </div>
 
                     <br>
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-primary" value="submit" name="sub">Submit</button>
+                    <div class="text-center button">
+                        <button type="submit" class="btn rounded-pill" value="submit" name="sub">Submit</button>
                     </div>
                 </form>
             </div>

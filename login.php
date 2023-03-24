@@ -54,13 +54,18 @@ if($exe && $r) {
     <!-- bootstrap link  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <style>
+        <?php
+        include "style.css";
+        ?>
+    </style>
 </head>
 <body>
 
     <div class="container"> 
     <div class="row justify-content-center">
-        <div class="col-lg-6 col-sm-12 shadow mt-4 p-3">
-            <p class="display-5 text-center">Login</p>
+        <div class="col-lg-6 col-sm-12 shadow mt-4 p-3 seventh">
+            <p class="display-5 text-center gradient-text">Login</p>
             <br>
             <form action="" method="post">
                 
@@ -73,12 +78,12 @@ if($exe && $r) {
                     <input type="password" class="form-control" id="password" name="password">
                 </div>
                 <br>
-                <div class="text-center">
-                <button type="submit" class="btn btn-primary" name="sub" value="submit">Submit</button>
+                <div class="text-center button">
+                <button type="submit" class="btn rounded-pill" name="sub" value="submit">Submit</button>
                 </div>
             </form>
             <br>
-            <p class="text-center">For Sign up <a href="registration.php">click here</a></p>
+            <p class="text-center">For Sign up <a href="registration.php" class="rounded-pill text-decoration-none">click here</a></p>
         </div>
     </div>
     </div>

@@ -1,4 +1,19 @@
+let count = 0;
+run = () =>{
+    let image;
+    let imagesarry = document.querySelectorAll(".imgs");
+    for (image = 0 ; image < imagesarry.length ; image++){
+        imagesarry[image].style.opacity = '0';
+        imagesarry[image].style.transition = '.8s';
+    }
+    count++;
+    if(count > imagesarry.length){
+        count = 1;
+    }
+    imagesarry[count - 1].style.opacity = '1';
+}
 
+setInterval(run,5000);
 
 var bar=document.getElementById('bar');
 var flag=0;
