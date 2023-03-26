@@ -13,7 +13,7 @@ $exe = mysqli_query($con, "SELECT * FROM packages");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Made-A-Trip</title>
     <!-- bootstrap link  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -185,7 +185,7 @@ $exe = mysqli_query($con, "SELECT * FROM packages");
 
             ?>
                 <div class="forcard col-lg-4 col-md-5 col-sm-10 mb-4">
-                    <div class="card">
+                    <div class="card card-seventh">
                         <img src="images/<?php echo $row['name']; ?>.jpg" alt="" class="card-img-top" style="height:250px;">
                         <div class="card-body" data-aos="fade-up">
                             <h5 class="card-title"><?php echo $row['name']; ?></h5>
@@ -193,8 +193,8 @@ $exe = mysqli_query($con, "SELECT * FROM packages");
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam alias natus non maiores ab eum nostrum vitae iure modi! Ad voluptatum modi ipsum eaque dolorum molestiae accusantium nisi quae alias?
                             <br>
                             <div class="row justify-content-between align-items-center">
-                                <a href="<?php echo "booking.php?c=" . $row['id']; ?>" class="btn bg-warning mx-2 my-3 col-4">Book</a>
-                                <span class="col-3"><?php echo $row['cost']; ?></span>
+                                <a href="<?php echo "booking.php?c=" . $row['id']; ?>" class="btn mx-2 my-3 col-4 card-button">Book</a>
+                                <span class="col-3 text-darker fw-bold">Rs <?php echo $row['cost']; ?></span>
                             </div>
                         </div>
                     </div>

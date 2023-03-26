@@ -34,7 +34,7 @@ if(isset($_POST['sub'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Packages</title>
     <!-- bootstrap link  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -45,7 +45,7 @@ if(isset($_POST['sub'])){
     </style>
 </head>
 <body>
-<div class="bg-warning main-head">
+<div class="main-head">
 <div class="container">
     <div class="row pt-3 justify-content-around align-items-center main-nav">
                 <div class="col-lg-2">LOGO</div>
@@ -67,12 +67,12 @@ if(isset($_POST['sub'])){
 </div>
 <br>
     <div>
-        <div class="container">
-            <div class="text-center h1">Add Package</div>
+        <div class="container seventh">
+            <div class="text-center h1 gradient-text">Add Package</div>
             <div class="row justify-content-center aling-items-center mt-3">
-                <div class="col-6">
+                <div class="col-6 button">
                     <form action="" method="post">
-                        <label for="package">package Name</label>
+                        <label for="package">Package Name</label>
                         <input type="text" class="form-control" id="package" name="package">
 
                         <label for="cost">Cost</label>
@@ -82,7 +82,7 @@ if(isset($_POST['sub'])){
                         <textarea name="descp" id="" cols="30" rows="4" class="form-control"></textarea>
                         <br>
 
-                        <button type="submit" value="submit" name="submit" class="btn btn-success px-3">Add</button>
+                        <button type="submit" value="submit" name="submit" class="btn rounded-pill px-3">Add</button>
                     </form>
                 
                 
@@ -93,19 +93,17 @@ if(isset($_POST['sub'])){
             <br>
             <br>
             <div class="text-center h1 mt-3">No. of Package</div>
-            <div class="row justify-content-center mt-2">
+            <div class="row justify-content-center mt-2 text-center">
                 <div class="col-12 text-center">
-                    <table border="2" class="table">
-
-                  
-                            <tr>
-                                <th>id</th>
-                                <th>Name</th>
-                                <th>Cost</th>
-                                <th>description</th>
-                                <th>Remove</th>
-                            </tr>
-                            <?php
+                    <div class="main-table ">
+                    <ul class="d-flex list-unstyled justify-content-between mx-2">
+                        <li>ID</li>
+                        <li>Name</li>
+                        <li>Cost</li>
+                        <li>Description</li>
+                        <li>Remove</li>
+                    </ul>
+                    <?php
                             
                             $exe=mysqli_query($con, "SELECT * FROM packages");
                             if($exe){
@@ -113,29 +111,36 @@ if(isset($_POST['sub'])){
                                     
                              
                             ?>
-                            <tr>
-                                <td><?php echo $row['id'];?></td>
-                                <td><?php echo $row['name'];?></td>
-                                <td><?php echo $row['cost'];?></td>
-                                <td><?php echo $row['description'];?></td>
-                               
-                                <td>
-                                    <form action="" method="post">
+                    <div class="row-cards d-flex justify-content-between ">
+                        <div class="id">
+                            <?php echo $row['id'];?>
+                        </div>
+                        <div class="Name">
+                        <?php echo $row['name'];?>
+                        </div>
+                        <div class="Const">
+                        <?php echo $row['cost'];?>
+                        </div>
+                        <div class="Des">
+                            <?php echo $row['description'];?>
+                        </div>
+                        <div class="rbtn">
+                            <form action="" method="post">
                                         
-                                        <button type="submit" value="<?php echo $row['id'];?>" name="sub" class="btn btn-danger px-3">Remove</button>
+                                        <button type="submit" value="<?php echo $row['id'];?>" name="sub" class="btn px-3">Remove</button>
                                     </form>
-                                </td>
-                            </tr>
-                 <?php
+                        </div>
+                    </div>
+                    <?php
                        }
                     }
                  ?>
-                    </table>
                 </div>
+                </div>
+                
             </div>
         </div>
     </div>
-    
 </body>
 </html>
 <?php

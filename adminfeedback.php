@@ -24,7 +24,7 @@ if(isset($_POST['sub'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Feedback</title>
     <!-- bootstrap link  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -34,7 +34,7 @@ if(isset($_POST['sub'])){
     </style>
 </head>
 <body>
-<div class="bg-warning main-head">
+<div class="main-head">
 <div class="container">
     <div class="row pt-3 justify-content-around align-items-center main-nav">
                 <div class="col-lg-2">LOGO</div>
@@ -56,24 +56,18 @@ if(isset($_POST['sub'])){
 </div>
     <br>
     <div class="container">
-        <div class="text-center display-5">Feedback</div>
+        <div class="text-center display-5 gradient-text">Feedback</div>
     <div class="row justify-content-center mt-4">
                 <div class="col-12 text-center">
-                    <table border="2" class="table">
-
-                    <col style="width:15%">
-	                <col style="width:15%">
-	                <col style="width:15%">
-	                <col style="width:40%">
-	                <col style="width:15%">
-                            <tr>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Contact</th>
-                                <th>feed</th>
-                                <th>remove</th>
-                            </tr>
-                            <?php
+                <div class="main-table ">
+                    <ul class="d-flex list-unstyled justify-content-between mx-2">
+                        <li>ID</li>
+                        <li>Name</li>
+                        <li>Cost</li>
+                        <li>Description</li>
+                        <li>Remove</li>
+                    </ul>
+                    <?php
                             
                             $exe=mysqli_query($con, "SELECT * FROM feedback");
                             if($exe){
@@ -81,24 +75,31 @@ if(isset($_POST['sub'])){
                                     
                              
                             ?>
-                            <tr>
-                                <td><?php echo $row['name'];?></td>
-                                <td><?php echo $row['email'];?></td>
-                                <td><?php echo $row['contact'];?></td>
-                                <td><?php echo $row['feed'];?></td>
-                               
-                                <td>
-                                    <form action="" method="post">
+                    <div class="row-cards d-flex justify-content-between ">
+                        <div class="id">
+                            <?php echo $row['name'];?>
+                        
+                        </div>
+                        <div class="Name">
+                            <?php echo $row['email'];?>
+                        </div>
+                        <div class="Const">
+                            <?php echo $row['contact'];?>
+                        </div>
+                        <div class="feed">
+                        <?php echo $row['feed'];?>
+                        </div>
+                        <div class="rbtn">
+                        <form action="" method="post">
                                         
-                                        <button type="submit" value="<?php echo $row['email'];?>" name="sub" class="btn btn-danger px-3">Remove</button>
+                                        <button type="submit" value="<?php echo $row['email'];?>" name="sub" class="btn px-3">Remove</button>
                                     </form>
-                                </td>
-                            </tr>
-                 <?php
+                        </div>
+                    </div>
+                    <?php
                        }
                     }
                  ?>
-                    </table>
                 </div>
             </div>
     </div>

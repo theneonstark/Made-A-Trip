@@ -23,7 +23,7 @@ if (isset($_REQUEST['sub'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Feedback</title>
 
     <!-- bootstrap link  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
@@ -100,7 +100,7 @@ if (isset($_REQUEST['sub'])) {
                     </div>
                     <br>
                     <div class="form-group">
-                        <label for="contact">contact Number</label>
+                        <label for="contact">Contact Number</label>
                         <input type="text" class="fifth" id="contact" name="contact">
                         <span class="text-danger small">optional</span>
                     </div>
