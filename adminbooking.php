@@ -104,7 +104,7 @@ if (isset($_SESSION['aid'])) {
                         <div class="Name">
                         <?php echo $r['name']; ?>
                         </div>
-                        <div class="Const">
+                        <div class="contact">
                         <?php echo $r['family_mem']; ?>
                         </div>
                         <div class="Des">

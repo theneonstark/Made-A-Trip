@@ -287,10 +287,10 @@ box-shadow:  -27px 27px 54px #999999,
     color: #000;
 }
 
-.row-cards .Name{
+/* .row-cards .Name{
     width: 39.83px;
     height: 1rem;
-}
+} */
 
 .row-cards .feed{
     width: 40%;
@@ -298,4 +298,27 @@ box-shadow:  -27px 27px 54px #999999,
 
 .row-cards .btns{
     gap: 1.25rem;
+}
+
+.rows {
+    width: 100%;
+}
+
+.id {
+    width: 20%;
+}
+
+
+.Name {
+    width: 20%;
+}
+
+.contact {
+    width: 20%;
+    text-align: center;
+}
+
+.id {
+    width: 20%;
+    overflow: auto;
 }

@@ -212,8 +212,9 @@ $exe = mysqli_query($con, "SELECT * FROM packages");
     <hr>
     <!-- feedback  -->
     <div class="container">
-        <p class="display-4 text-center">Feedback</p>
-        <?php
+        <p class="display-4 text-center gradient-text">Feedback</p>
+        <div class="d-flex justify-content-between ">
+            <?php
 
         $fe = mysqli_query($con, "SELECT * FROM feedback");
 
@@ -221,7 +222,7 @@ $exe = mysqli_query($con, "SELECT * FROM packages");
 
 
         ?>
-            <div class=" p-3">
+            <div class="p-3 w-50 row-cards mx-2">
                 <p class="h3"><i class="bi bi-person-circle me-2"> </i><?php echo $r['name'] ?></p>
                 <p><?php echo $r['feed'] ?></p>
             </div>
@@ -230,6 +231,7 @@ $exe = mysqli_query($con, "SELECT * FROM packages");
         <?php
         }
         ?>
+        </div>
     </div>
 
 

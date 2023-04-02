@@ -61,10 +61,10 @@ if(isset($_POST['sub'])){
                 <div class="col-12 text-center">
                 <div class="main-table ">
                     <ul class="d-flex list-unstyled justify-content-between mx-2">
-                        <li>ID</li>
                         <li>Name</li>
-                        <li>Cost</li>
-                        <li>Description</li>
+                        <li>Email</li>
+                        <li>Contact</li>
+                        <li>Feed</li>
                         <li>Remove</li>
                     </ul>
                     <?php
@@ -75,7 +75,7 @@ if(isset($_POST['sub'])){
                                     
                              
                             ?>
-                    <div class="row-cards d-flex justify-content-between ">
+                    <div class="row-cards d-flex justify-content-between rows">
                         <div class="id">
                             <?php echo $row['name'];?>
                         
@@ -83,10 +83,10 @@ if(isset($_POST['sub'])){
                         <div class="Name">
                             <?php echo $row['email'];?>
                         </div>
-                        <div class="Const">
+                        <div class="contact">
                             <?php echo $row['contact'];?>
                         </div>
-                        <div class="feed">
+                        <div class="feed w-20">
                         <?php echo $row['feed'];?>
                         </div>
                         <div class="rbtn">
